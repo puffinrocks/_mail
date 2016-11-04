@@ -16,8 +16,14 @@ services:
             back:
                 aliases:
                     - mail
-
+        volumes: 
+            - main_data:/var/spool/postfix
+        tmpfs:
+            - /run
+            - /tmp
 networks:
     back:
         external:
             name: "puffin_back"
+volumes:
+    main_data:
