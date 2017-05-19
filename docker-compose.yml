@@ -1,7 +1,7 @@
 version: '2'
 
 services:
- 
+
     main:
         image: alterrebe/postfix-relay
         environment:
@@ -16,7 +16,7 @@ services:
             back:
                 aliases:
                     - mail
-        volumes: 
+        volumes:
             - main_data:/var/spool/postfix
         tmpfs:
             - /run
